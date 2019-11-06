@@ -1,4 +1,4 @@
-#i-logo.menu {
+.menu {
   box-sizing: border-box;
   position: relative;
 }
@@ -21,25 +21,27 @@
   height: 24px;
 }
 
-#i-logo {
+.menu__logo svg {
   width: 104px;
   height: 24px;
+}
+
+.revers__logo svg #i-logo path{
   fill: #000000;
 }
 
-#i-logo path:last-child {
+.revers__logo svg #i-logo #i-logo-last {
   fill: #ffffff;
 }
 
 .menu__logo--active {
   margin-bottom: 107px;
 }
-
-.menu__logo--active #i-logo {
+.no-revers__logo svg #i-logo path{
   fill: #ffffff;
 }
 
-.menu__logo--active #i-logo path:last-child {
+.no-revers__logo svg #i-logo #i-logo-last {
   fill: #000000;
 }
 
@@ -164,7 +166,7 @@
     height: 27px;
   }
 
-  .menu__logo #i-logo {
+  .menu__logo svg {
     width: 120px;
     height: 27px;
   }
@@ -198,7 +200,7 @@
     fill: #000000;
   }
 
-  .menu__logo--active #i-logo path:last-child {
+  .menu__logo--active #i-logo #i-logo-last {
     fill: #ffffff;
   }
 
