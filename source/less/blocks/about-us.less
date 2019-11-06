@@ -19,24 +19,24 @@
   height: 191px;
 }
 
-#i-knight path:nth-child(even) {
+.about-us__name svg path:nth-child(even) {
   fill: #ffffff;
 }
 
-#i-knight path:nth-child(odd) {
+.about-us__name svg path:nth-child(odd) {
   fill: #000000;
 }
 
-#i-knight path:first-child {
+.about-us__name svg path:first-child {
   fill: #ffffff;
 }
 
-#i-knight path:nth-child(2),
-#i-knight path:nth-child(36) {
+.about-us__name svg path:nth-child(2),
+.about-us__name svg path:nth-child(36) {
   fill: #000000;
 }
 
-#i-knight path:nth-child(3) {
+.about-us__name svg path:nth-child(3) {
   fill: #2C39F2;
 }
 
@@ -56,7 +56,7 @@
   color: #FFFFFF;
   mix-blend-mode: normal;
   opacity: 0.9;
-  text-shadow: 0 0 2px #2C39F2;
+  text-shadow: 2px 0 2px #2c39f2, 0 2px 2px #2c39f2, -2px 0 2px #2c39f2, 0 -2px 2px #2c39f2;
 }
 
 .about-us__lists {
@@ -126,9 +126,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-left: 18px;
-    margin-right: 18px;
+    padding-left: 18px;
+    padding-right: 18px;
   }
+
   .about-us__lists,
   .about-us__name {
     margin: 0;
@@ -150,12 +151,11 @@
     margin-bottom: 16px;
   }
 }
-
 @media (min-width: @size-desktop) {
   .about-us {
-    margin-top: 37px;
-    margin-left: 62px;
-    margin-right: 58px;
+    padding-top: 37px;
+    padding-left: 62px;
+    padding-right: 58px;
   }
 
   .about-us__lists {
@@ -164,13 +164,54 @@
 
   .about-us__name svg {
     margin-right: 20px;
-}
+  }
 }
 @media (min-width: 1240px) {
   .about-us__name svg {
     margin-right: 63px;
+  }
+
+  .about-us__lists {
+    margin-top: 50px;
+  }
 }
-.about-us__lists {
-  margin-top: 50px;
-}
+@media (min-width: 1230px) {
+  ///////////night////////////////
+  .night {
+    background: #000000;
+
+    & .about-us__name svg path:nth-child(even) {
+      fill: #000000;
+    }
+
+    & .about-us__name svg path:nth-child(odd) {
+      fill: #ffffff;
+    }
+
+    & .about-us__name svg path:first-child {
+      fill: #000000;
+    }
+
+    & .about-us__name svg path:nth-child(2),
+    & .about-us__name svg path:nth-child(36) {
+      fill: #ffffff;
+    }
+
+    & .about-us__name svg path:nth-child(3) {
+      fill: #2C39F2;
+    }
+
+    & .about-us__title {
+      color: #ffffff;
+    }
+
+    & .about-us__title span {
+      text-shadow: 2px 0 2px #ffffff, 0 2px 2px #ffffff, -2px 0 2px #ffffff, 0 -2px 2px #ffffff;
+      color: #000000;
+    }
+
+    & .about-us__list span {
+      color: #ffffff;
+    }
+  }
 }

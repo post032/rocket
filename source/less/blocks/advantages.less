@@ -1,8 +1,8 @@
 .advantages {
   box-sizing: border-box;
   position: relative;
-  margin-left: 16px;
-  margin-right: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -118,8 +118,8 @@
 }
 @media (min-width: @size-desktop) {
   .advantages {
-    margin-left: 58px;
-    margin-right: 63px;
+    padding-left: 58px;
+    padding-right: 63px;
     padding-bottom: 40px;
   }
   .advantages__lists{
@@ -151,5 +151,15 @@
   .advantages__text {
     margin-top: 5px;
     width: 88%;
+  }
+}
+
+@media (min-width: 1230px) {
+  //////////////////night/////////////
+  .night {
+    & .advantages__item span,
+    & .advantages__text {
+      color: #ffffff;
+    }
   }
 }
