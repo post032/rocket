@@ -75,7 +75,7 @@ gulp.task("images", function() {
     .pipe(gulp.dest("source/img"));
 });
 gulp.task("sprite", function() {
-  return gulp.src("source/img/*.svg")
+  return gulp.src("source/img/i-*.svg")
     .pipe(svgstore({
       inlineSvg: true
     }))
