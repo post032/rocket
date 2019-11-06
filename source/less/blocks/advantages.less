@@ -1,0 +1,155 @@
+.advantages {
+  box-sizing: border-box;
+  position: relative;
+  margin-left: 16px;
+  margin-right: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.advantages__lists {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.advantages__list,
+.advantages__test {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.advantages__test {
+  flex-direction: column;
+  margin-top: 24px;
+}
+
+.advantages__item {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.advantages__item span {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.advantages__text {
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 21px;
+  color: #000000;
+  margin-top: 1px;
+  width: 77%;
+}
+.advantages__text br {
+  display: none;
+}
+
+.advantages__icons {
+  display: flex;
+  flex-direction: row;
+}
+
+.advantages__icon::after {
+  content: "";
+  display: block;
+  margin-right: 20px;
+  margin-bottom: 6px;
+}
+
+.advantages__icon-1::after {
+  width: 39px;
+  height: 39px;
+  background: url("../img/sprites.png") no-repeat left top;
+}
+
+.advantages__icon-2::after {
+  width: 42px;
+  height: 42px;
+  background: url("../img/sprites.png") no-repeat -59px top;
+}
+
+.advantages__icon-3::after {
+  width: 45px;
+  height: 39px;
+  background: url("../img/sprites.png") no-repeat right top;
+}
+
+.advantages__test .advantages__test {
+  margin-left: 0;
+}
+@media (min-width: 600px) {
+  .advantages__list,
+  .advantages__test {
+    width: 284px;
+  }
+}
+@media (min-width: @size-tablet) {
+  .advantages__list {
+    flex-direction: column;
+  }
+
+  .advantages__item span {
+    font-size: 40px;
+    line-height: 44px;
+    color: #F81B56;
+  }
+
+  .advantages__text {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 32px;
+    color: #000000;
+  }
+
+  .advantages__list,
+  .advantages__test {
+    width: 350px;
+  }
+}
+@media (min-width: @size-desktop) {
+  .advantages {
+    margin-left: 58px;
+    margin-right: 63px;
+    padding-bottom: 40px;
+  }
+  .advantages__lists{
+    justify-content: space-around;
+    margin-top: 17px;
+  }
+
+  .advantages__text br {
+    display: inline-block;
+  }
+
+  .advantages__icons {
+    margin-top: 33px;
+  }
+}
+
+@media (min-width: 1348px) {
+  .advantages__lists{
+    justify-content: space-between;
+    margin-top: 17px;
+  }
+
+  .advantages__list,
+  .advantages__test {
+    width: 409px;
+    margin-bottom: 41px;
+  }
+
+  .advantages__text {
+    margin-top: 5px;
+    width: 88%;
+  }
+}
