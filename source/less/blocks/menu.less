@@ -1,0 +1,370 @@
+.menu {
+  box-sizing: border-box;
+  position: relative;
+}
+
+.menu--active {
+  background: #2C39F2;
+  padding-bottom: 180px;
+}
+
+.menu__block {
+  padding: 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.menu__logo {
+  display: flex;
+  // align-items: center;
+  height: 24px;
+}
+
+.menu__logo svg {
+  width: 104px;
+  height: 24px;
+  fill: #000000;
+}
+
+.menu__logo svg path:last-child {
+  fill: #ffffff;
+}
+
+.menu__logo--active {
+  margin-bottom: 107px;
+}
+
+.menu__logo--active svg {
+  fill: #ffffff;
+}
+
+.menu__logo--active svg path:last-child {
+  fill: #000000;
+}
+
+.menu__open {
+  position: relative;
+  background: #ffffff;
+  border: none;
+  cursor: pointer;
+  width: 24px;
+  height: 22px;
+}
+
+.menu__open::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 24px;
+  height: 4px;
+  background-color: #2C39F2;
+  -webkit-box-shadow: 0 8px 0 0 #2C39F2, 0 16px 0 0 #2C39F2;
+  box-shadow: 0 9px 0 0 #2C39F2, 0 18px 0 0 #2C39F2;
+}
+
+.menu__close {
+  background: #2C39F2;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  width: 24px;
+  height: 22px;
+}
+
+.menu__close::after,
+.menu__close::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: -1px;
+  width: 24px;
+  height: 4px;
+  background-color: #000000;
+}
+
+.menu__close::before {
+  transform: rotate(-45deg);
+}
+
+.menu__close::after {
+  transform: rotate(45deg);
+}
+
+.menu__logo::after {
+  content: "";
+  background: url("../img/frontend.svg") no-repeat;
+  display: inline-block;
+  width: 79px;
+  height: 24px;
+  margin-left: 7px;
+}
+
+.menu__nav {
+  position: relative;
+}
+
+.menu__lists {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu__link {
+  width: 53%;
+  padding: 0 23%;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 46px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.menu__link--opacity {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.menu__nav--close {
+  display: none;
+}
+
+.menu__list:last-child {
+  display: none;
+}
+
+.menu__toggle,
+.menu__range,
+.menu__weather {
+  display: none;
+}
+@media (min-width: @size-tablet) {
+  .menu {
+    padding: 18px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu__block {
+    padding: 6px 0 0;
+    width: 220px;
+    flex-wrap: wrap;
+  }
+
+  .menu__logo {
+    height: 27px;
+  }
+
+  .menu__logo svg {
+    width: 120px;
+    height: 27px;
+  }
+
+  .menu__list:nth-child(2) {
+    order: 1;
+  }
+
+  .menu__nav,
+  .menu__nav--close,
+  .menu__toggle {
+    display: flex;
+    position: relative;
+  }
+.menu__nav {
+  flex-grow: 1;
+}
+  .menu__lists {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+
+  .menu--active {
+    background: #ffffff;
+    padding-bottom: 0;
+  }
+
+  .menu__logo--active svg {
+    fill: #000000;
+  }
+
+  .menu__logo--active svg path:last-child {
+    fill: #ffffff;
+  }
+
+  .menu__close,
+  .menu__logo::after,
+  .menu__open {
+    display: none;
+  }
+
+  .menu__link {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 35px;
+    color: #000000;
+    width: 100%;
+    height: 84%;
+    padding: 5px 10px;
+  }
+
+  .menu__link--opacity {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .menu__logo--active {
+    margin-bottom: 0;
+  }
+
+  .menu__button {
+    width: 150px;
+    min-height: 50px;
+    background: #2C39F2;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+
+  .menu__list {
+    align-items: flex-start;
+  }
+
+  .menu__list:last-child {
+    display: flex;
+    order: 2;
+    margin-top: 0;
+  }
+}
+@media (min-width: @size-desktop) {
+  .menu {
+    padding: 32px 57px;
+  }
+
+  .menu__button {
+    width: 190px;
+  }
+
+  .menu__link {
+    font-size: 18px;
+    padding: 0 25px;
+  }
+
+  .menu__list:last-child {
+    margin-left: 57px;
+  }
+}
+
+@media (min-width: 1230px) {
+  .menu__list {
+    margin-top: 5px;
+  }
+  .menu__label {
+    position: relative;
+    margin-right: 24px;
+
+    &::before {
+      content: "";
+      width: 3px;
+      height: 3px;
+      display: block;
+      border: 1px solid #FFFFFF;
+      border-radius: 50%;
+      position: absolute;
+      top: 12px;
+      left: 13px;
+      z-index: 10;
+    }
+
+    &::after {
+      content: "";
+      width: 10px;
+      height: 10px;
+      display: block;
+      background: url("../img/moon.svg") no-repeat;
+      position: absolute;
+      top: 10px;
+      right: 11px;
+      z-index: 10;
+    }
+  }
+
+  .menu {
+    &__range {
+      display: flex;
+      -webkit-appearance: none;
+      outline: none;
+      position: relative;
+      width: 47px;
+      height: 25.74px;
+      border-radius: 15px;
+      border: 3px solid #000000;
+      box-sizing: border-box;
+      overflow: hidden;
+      transition: background 0.2s ease;
+      background: #ffffff;
+      padding-left: 3px;
+      padding-right: 3px;
+      margin-left: 25px;
+
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background 0.2s ease;
+        background-color: #2C39F2;
+        background-repeat: no-repeat;
+        background-position: 5px 5px;
+        background-image: url("../img/day.svg");
+      }
+
+      &--night {
+        background-color: #3538cb;
+
+        &::-webkit-slider-thumb {
+          background: #2C39F2;
+          background-image: url("../img/moon.svg");
+          background-repeat: no-repeat;
+          background-position: 4px 4px;
+        }
+      }
+    }
+  }
+  .menu__weather {
+    display: block;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+    color: #000000;
+    margin-top: 3px;
+
+  & span {
+    font-weight: 300;
+  }
+}
+
+.menu__nav {
+  flex-grow: 0;
+}
+  .menu__lists {
+    flex-grow: 0;
+  }
+}
